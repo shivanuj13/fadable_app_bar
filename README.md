@@ -7,6 +7,12 @@
 
 This Package is simple implementation of a fadable app bar for flutter. A wrapper on flutter's AppBar() to create a fade effect on the app bar when scrolling. This is a very common effect in many apps and is missing from flutter's default widgets.
 
+## Demo
+
+<img src="https://github.com/shivanuj13/fadable_app_bar/blob/main/asset/screenshot/example-material-3.gif?raw=true" width=35% alt="demo with material 3"> &nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/shivanuj13/fadable_app_bar/blob/main/asset/screenshot/example.gif?raw=true" width=35% alt="demo with material 2">
+
+demo with material 3 and with material 2 respectively
 
 ## Features
 
