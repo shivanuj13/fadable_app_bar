@@ -1,7 +1,6 @@
 import 'package:fadable_app_bar/fadable_app_bar.dart';
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(MainApp());
 }
@@ -17,8 +16,10 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(useMaterial3: true),
       home: Scaffold(
           appBar: FadableAppBar(
-              scrollController: _controller,
-              title: const Text('Fadable App Bar Demo')),
+            scrollController: _controller,
+            title: const Text('Fadable App Bar Demo'),
+            foregroundColor: Colors.white,
+          ),
           body: ListView.builder(
               controller: _controller,
               itemCount: 100,
