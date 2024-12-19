@@ -382,8 +382,8 @@ class FadableAppBar extends StatefulWidget implements PreferredSizeWidget {
   /// overall theme's brightness is [Brightness.light], and [ColorScheme.surface]
   /// if the overall theme's [brightness] is [Brightness.dark].
   ///
-  /// If this color is a [MaterialStateColor] it will be resolved against
-  /// [MaterialState.scrolledUnder] when the content of the app's
+  /// If this color is a [WidgetStateColor] it will be resolved against
+  /// [WidgetState.scrolledUnder] when the content of the app's
   /// primary scrollable overlaps the app bar.
   /// {@endtemplate}
   ///
@@ -650,15 +650,18 @@ class _FadableAppBarState extends State<FadableAppBar> {
           (_scrollPosition / widget.fadeFactor).clamp(0, 1).toDouble() == 1
               ? widget.elevation
               : 0,
-      backgroundColor: widget.backgroundColor?.withOpacity(
-              (_scrollPosition / widget.fadeFactor).clamp(0, 1).toDouble()) ??
-          Theme.of(context).primaryColor.withOpacity(
-              (_scrollPosition / widget.fadeFactor).clamp(0, 1).toDouble()),
+      backgroundColor: widget.backgroundColor?.withValues(
+              alpha: (_scrollPosition / widget.fadeFactor)
+                  .clamp(0, 1)
+                  .toDouble()) ??
+          Theme.of(context).primaryColor.withValues(
+              alpha:
+                  (_scrollPosition / widget.fadeFactor).clamp(0, 1).toDouble()),
       foregroundColor:
           (_scrollPosition / widget.fadeFactor).clamp(0, 1).toDouble() == 1
               ? widget.foregroundColor
               : widget.foregroundColorOnFaded ??
-                  Theme.of(context).colorScheme.onBackground,
+                  Theme.of(context).colorScheme.onPrimary,
       key: widget.key,
       leading: widget.leading,
       automaticallyImplyLeading: widget.automaticallyImplyLeading,
