@@ -24,7 +24,7 @@ demo with material 3 and with material 2 respectively
 
 ```yaml
 dependencies:
-  fadable_app_bar: <latest_version>
+  fadable_app_bar: ^0.1.0
 ```
 
 ```dart
@@ -54,6 +54,8 @@ class MainApp extends StatelessWidget {
             scrollController: _controller,
             title: const Text('Fadable App Bar Demo'),
             foregroundColor: Colors.white,
+            foregroundColorOnFaded: Colors.black,
+            backgroundColor: Colors.green,
           ),
           body: ListView.builder(
               controller: _controller,
@@ -67,7 +69,6 @@ class MainApp extends StatelessWidget {
     );
   }
 }
-
 ```
 ### Additional Parameters
 
