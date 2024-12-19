@@ -13,13 +13,12 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(useMaterial3: false),
       home: Scaffold(
           appBar: FadableAppBar(
             scrollController: _controller,
             title: const Text('Fadable App Bar Demo'),
             foregroundColor: Colors.white,
-            foregroundColorOnFaded: Colors.amber,
+            foregroundColorOnFaded: Colors.black,
             backgroundColor: Colors.green,
           ),
           body: ListView.builder(
