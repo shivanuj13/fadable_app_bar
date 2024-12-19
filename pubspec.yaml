@@ -5,6 +5,7 @@ homepage: https://github.com/shivanuj13/fadable_app_bar
 issue_tracker: https://github.com/shivanuj13/fadable_app_bar/issues
 
 environment:
+  sdk: '>=2.19.1 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
