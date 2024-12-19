@@ -650,7 +650,8 @@ class _FadableAppBarState extends State<FadableAppBar> {
           (_scrollPosition / widget.fadeFactor).clamp(0, 1).toDouble() == 1
               ? widget.elevation
               : 0,
-      backgroundColor: widget.backgroundColor ??
+      backgroundColor: widget.backgroundColor?.withOpacity(
+              (_scrollPosition / widget.fadeFactor).clamp(0, 1).toDouble()) ??
           Theme.of(context).primaryColor.withOpacity(
               (_scrollPosition / widget.fadeFactor).clamp(0, 1).toDouble()),
       foregroundColor:
